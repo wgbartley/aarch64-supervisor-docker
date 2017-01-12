@@ -4,20 +4,25 @@ This repository contains **Dockerfile** of [Supervisor](http://supervisord.org/)
 
 ### Base Docker Image
 
-* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
+* [aarch64/ubuntu](http://dockerfile.github.io/r/aarch64/ubuntu)
 
 ### Installation
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/kdelfour/supervisor-docker/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull kdelfour/supervisor-docker`
+2. Download [build](https://registry.hub.docker.com/u/wgbartley/aarch64-supervisor-docker/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull wgbartley/aarch64-supervisor-docker`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="kdelfour/supervisor-docker" https://github.com/kdelfour/supervisor-docker`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="wgbartley/aarch64-supervisor-docker" https://github.com/wgbartley/aarch64-supervisor-docker`)
 
 ### Usage
 
-    docker run -it --rm kdelfour/supervisor-docker
+    docker run -it --rm wgbartley/aarch64-supervisor-docker
 
 #### Run with custom config directory
 
-    docker run -d -v <config-dir>:/etc/supervisor/conf.d kdelfour/supervisor-docker
+    docker run -d -v <config-dir>:/etc/supervisor/conf.d wgbartley/aarch64-supervisor-docker
+
+### Credit
+
+This image was built from the original kdelfour/supervisor-docker image with minor tweaks
+to work with aarch64/ubuntu (for original intended use on a Pine 64 single board computer).

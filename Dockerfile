@@ -1,9 +1,13 @@
 # ------------------------------------------------------------------------------
 # Based on a work at https://github.com/docker/docker.
+# 
+# aarch64 version adapted from original kdelfour/supervisor-docker image
+#  - https://hub.docker.com/r/kdelfour/supervisor-docker/
 # ------------------------------------------------------------------------------
 # Pull base image.
-FROM ubuntu
-MAINTAINER Kevin Delfour <kevin@delfour.eu>
+
+FROM aarch64/ubuntu
+MAINTAINER Garrett Bartley <wgbartley@gmail.com>
 
 # Install Supervisor.
 RUN \
